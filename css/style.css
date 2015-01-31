@@ -134,7 +134,7 @@ input {
 	background-image:url('../images/Splat10.png');
 }
 
-html { 
+body { 
   background: url('../images/background.jpg') no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -145,6 +145,8 @@ html {
 h1, h2, h3, h4, h5, h6 {
     text-align: center;
 }
+
+
 
 /*First page */
 
@@ -157,9 +159,19 @@ div.play-button {
     text-align: center;
 }
 
+/* HELPERS */
 .inline {
     display: inline-block;
 }
+
+.transparent-background {
+    background: rgba(255,255,255,0.9);
+}
+
+.top-buffer { 
+    margin-top:20px; 
+}
+
 <<<<<<< Updated upstream
 =======
 
