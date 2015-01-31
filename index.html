@@ -13,14 +13,16 @@
 
 		<div class="row">
 
-			<div class="twelve columns">
+			<div class="six columns">
 				<h1>Frack-A-Mole</h1>
+				</div>
+			<div class="six columns">
+				<h4>Score: <strong id="score">0</strong>&nbsp;points</h4>
+				<input type="button" value="Start" onclick="frackamole.newGame();" />
+				<input type="button" value="Reset" onclick="frackamole.resetGame();" />
 			</div>
 			
 			<div class="twelve columns">
-				<input type="button" value="Start" onclick="frackamole.newGame();" />
-				<input type="button" value="Reset" onclick="frackamole.resetGame();" />
-				<h4>Score: <strong id="score">0</strong>&nbsp;points</h4>
 				<div id="map"></div>
 			</div>
 

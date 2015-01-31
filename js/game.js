@@ -5,9 +5,7 @@
 */
 
 var frackamole = new Object({
-    'cols': 2,
-    'rows': 5,
-    'count': 0, // total count (auto set on create)
+    'count': 10, // total count (auto set on create)
     'seconds': 0, // start
     'time': 20, // max seconds
     'timeout': null, // timeout id
@@ -19,17 +17,14 @@ var frackamole = new Object({
 
     // Put the holes on the UK map
     'createHoles': function() {
-        var b = document.getElementById('map');
-        b.style.width = this.cols * 56 + 'px';
-        b.style.height = this.rows * 56 + 'px';
+        var m = document.getElementById('map');
 
         var e = null, id = 1; // element and it's id
-        for (var r = 0; r < this.rows; r++) {
-            for (var c = 0; c < this.cols; c++) {
+            for (var c = 0; c < this.count; c++) {
                 e = document.createElement('div'); // create element
                 e.className = 'hole';
                 e.id = 'hole-' + id;
-                b.appendChild(e); // add to map
+                m.appendChild(e); // add to map
 
                 // add onclick event
                 if (e.attachEvent) {
@@ -40,9 +35,6 @@ var frackamole = new Object({
 
                 id++;
             }
-        }
-
-        this.count = this.cols * this.rows; // set total hole count
     },
 
     'clickHole': function(id) {

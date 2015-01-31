@@ -9,18 +9,18 @@ input {
     padding: 10px;
     margin: 10px 0px;
     min-width: 500px;
-    min-height:900px;
+    min-height:620px;
     border-radius: 20px;
     border: 1px solid #999;
     background-image:url('../images/UKFrackingMapwithHoles.png');
+    background-repeat:no-repeat;
 }
 
 .hole {
     width: 50px;
     height: 50px;
     margin: 2px;
-    float: left;
-    cursor: wait;
+    cursor: pointer;
     text-align: center;
     background-color: #fff;
     border-radius: 10px;
