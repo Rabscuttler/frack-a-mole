@@ -1,4 +1,6 @@
 Frack-A-Mole Game for HackChange, January 2015
 ==============================================
 
-Using open source code (MIT license) from [Christopher Scott's Whack-A-Mole Game](https://github.com/christopherscott/whackamole).
+Frack the UK, and damn the consequences! 
+
+[HackChange hackday enviro team](http://hackchange.org.uk/)
