@@ -34,6 +34,22 @@ input {
     background-color: #A1BB79;
 }
 
-.columns {
-	border:1px solid red;
+
+h1, h2, h3, h4, h5, h6 {
+    text-align: center;
+}
+
+/*First page */
+
+div.intro-box {
+    padding-top:50px;
+    padding-bottom: 50px;
+}
+
+div.play-button {
+    text-align: center;
+}
+
+.inline {
+    display: inline-block;
 }
