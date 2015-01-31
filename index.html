@@ -4,7 +4,8 @@
 	<meta charset="UTF-8">
 	<title>Frack-A-Mole</title>
 	<link rel="stylesheet" type="text/css" href="css/normalize.css" media="all" />
-	<link rel="stylesheet" type="text/css" href="css/skeleton.css" media="all" />
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" media="all" />
+	<link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css" media="all" />
 	<link rel="stylesheet" type="text/css" href="css/style.css" media="all" />
 
 </head>
@@ -13,16 +14,16 @@
 
 		<div class="row">
 
-			<div class="six columns">
+			<div class="col-xs-6">
 				<h1>Frack-A-Mole</h1>
 				</div>
-			<div class="six columns">
+			<div class="col-xs-6">
 				<h4>Score: <strong id="score">0</strong>&nbsp;points</h4>
 				<input type="button" value="Start" onclick="frackamole.newGame();" />
 				<input type="button" value="Reset" onclick="frackamole.resetGame();" />
 			</div>
 			
-			<div class="twelve columns">
+			<div class="col-xs-12">
 				<div id="map"></div>
 			</div>
 

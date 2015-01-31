@@ -19,13 +19,11 @@ input {
 .hole {
     width: 50px;
     height: 50px;
-    padding:5px;
-    margin: -3px;
+    margin: 2px;
     cursor: pointer;
     text-align: center;
     /*border: 1px solid #999;*/
 	position:relative;
-	overflow:visible;
 }
 
 #hole-1 {
@@ -71,7 +69,7 @@ input {
 
 .hole.on {
     cursor: pointer;
-    overflow:visible;
+    background-size: contain;
 }
 
 #hole-1.hole.on {
