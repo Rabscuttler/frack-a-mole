@@ -104,6 +104,14 @@ input {
 }
 
 
+html { 
+  background: url('../images/background.jpg') no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
 h1, h2, h3, h4, h5, h6 {
     text-align: center;
 }
@@ -122,3 +130,10 @@ div.play-button {
 .inline {
     display: inline-block;
 }
+<<<<<<< Updated upstream
+=======
+
+.play-button {
+    font-size: 300%;
+}
+>>>>>>> Stashed changes
