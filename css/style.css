@@ -103,6 +103,36 @@ input {
 	background-image:url('../images/People10.png');
 }
 
+.Splat1{
+	background-image:url('../images/Splat1.png');
+}
+.Splat2{
+	background-image:url('../images/Splat2.png');
+}
+.Splat3{
+	background-image:url('../images/Splat3.png');
+}
+.Splat4{
+	background-image:url('../images/Splat4.png');
+}
+.Splat5{
+	background-image:url('../images/Splat5.png');
+}
+.Splat6{
+	background-image:url('../images/Splat6.png');
+}
+.Splat7{
+	background-image:url('../images/Splat7.png');
+}
+.Splat8{
+	background-image:url('../images/Splat8.png');
+}
+.Splat9{
+	background-image:url('../images/Splat9.png');
+}
+.Splat10{
+	background-image:url('../images/Splat10.png');
+}
 
 html { 
   background: url('../images/background.jpg') no-repeat center center fixed; 

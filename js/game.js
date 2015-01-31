@@ -42,7 +42,7 @@ var frackamole = new Object({
         if (hole.className != 'hole') {
             this.points += 10;
             document.getElementById('score').innerHTML = this.points;
-            hole.className = 'hole'; // prevent multiple clicking
+            hole.className = 'Splat' + id ; 
         }
     },
 
