@@ -134,6 +134,58 @@ input {
 	background-image:url('../images/Splat10.png');
 }
 
+.bubble1 {
+	background-image:url('../images/SpeechBubbles1.png');
+	width:200px;
+	height:100px;
+}
+.bubble2 {
+	background-image:url('../images/SpeechBubbles2.png');
+	width:200px;
+	height:100px;
+}
+.bubble3 {
+	background-image:url('../images/SpeechBubbles3.png');
+	width:200px;
+	height:100px;
+}
+.bubble4 {
+	background-image:url('../images/SpeechBubbles4.png');
+	width:200px;
+	height:100px;
+}
+.bubble5 {
+	background-image:url('../images/SpeechBubbles5.png');
+	width:200px;
+	height:100px;
+}
+.bubble6 {
+	background-image:url('../images/SpeechBubbles6.png');
+	width:200px;
+	height:100px;
+}
+.bubble7 {
+	background-image:url('../images/SpeechBubbles7.png');
+	width:200px;
+	height:100px;
+}
+.bubble8 {
+	background-image:url('../images/SpeechBubbles8.png');
+	width:200px;
+	height:100px;
+}
+.bubble9 {
+	background-image:url('../images/SpeechBubbles9.png');
+	width:200px;
+	height:100px;
+}
+.bubble10 {
+	background-image:url('../images/SpeechBubbles10.png');
+	width:200px;
+	height:100px;
+}
+
+
 body { 
   background: url('../images/background.jpg') no-repeat center center fixed; 
   -webkit-background-size: cover;

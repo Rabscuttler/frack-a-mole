@@ -9,7 +9,7 @@ var frackamole = new Object({
     'seconds': 0, // start
     'time': 20, // max seconds
     'timeout': null, // timeout id
-    'duration': 1000, // how many ms hole will be on
+    'duration': 2000, // how many ms hole will be on
     'difficulty': 10, // how many ms hole-on-duration will decrease each step 
     'points': 0,
 
@@ -42,7 +42,9 @@ var frackamole = new Object({
         if (hole.className != 'hole') {
             this.points += 10;
             document.getElementById('score').innerHTML = this.points;
-            hole.className = 'Splat' + id ; 
+            // hole.className = 'Splat' + id ; 
+            hole.className = 'hole'; //Prevents doubleclicking
+            frackamole.clearBubble(id)
         }
     },
 
@@ -58,11 +60,13 @@ var frackamole = new Object({
         var colorClass = (toggle == 'on' ? ' on' : '');
         var hole = document.getElementById('hole-' + id);
         hole.className = 'hole' + colorClass;
+        // frackamole.addBubble(id); // broken broken broken broken broken 
         if (toggle == 'on') {
             // clear after interval
             this.seconds++;
             this.timeout = setTimeout(function() {
                 frackamole.highlightHole(id)
+                // frackamole.clearBubble(id) /// BROKEN BROKEN BROKEN 
             }, this.duration);
             this.duration -= this.difficulty;
         } else {
@@ -74,6 +78,18 @@ var frackamole = new Object({
                 }, 100);
             }
         }
+    },
+
+    'addBubble': function(id){
+    var img = new Image();
+    img.src = 'images/SpeechBubbles'+id+'.png';
+
+	document.getElementById("hole-" + id).appendChild(img);
+    },
+
+    'clearBubble': function(id){
+    	var element = document.getElementById('bubble' + id);
+    	element.parentNode.removeChild(element);
     },
 
     'resetHoles': function() {
