@@ -1,0 +1,39 @@
+input {
+    padding: 2px 5px;
+    border-radius: 5px;
+    border: 1px outline #000;
+}
+
+#map {
+    clear: both;
+    padding: 10px;
+    margin: 10px 0px;
+    min-width: 500px;
+    min-height:900px;
+    border-radius: 20px;
+    border: 1px solid #999;
+    background-image:url('../images/UKFrackingMapwithHoles.png');
+}
+
+.hole {
+    width: 50px;
+    height: 50px;
+    margin: 2px;
+    float: left;
+    cursor: wait;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 10px;
+    border: 1px solid #999;
+    background-color: #d0d0d0;
+    font: 16px/50px Arial, Verdana, sans-serif;
+}
+
+.hole.on {
+    cursor: pointer;
+    background-color: #A1BB79;
+}
+
+.columns {
+	border:1px solid red;
+}
