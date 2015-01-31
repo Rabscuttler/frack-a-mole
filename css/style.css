@@ -19,19 +19,90 @@ input {
 .hole {
     width: 50px;
     height: 50px;
-    margin: 2px;
+    padding:5px;
+    margin: -3px;
     cursor: pointer;
     text-align: center;
-    background-color: #fff;
-    border-radius: 10px;
-    border: 1px solid #999;
-    background-color: #d0d0d0;
-    font: 16px/50px Arial, Verdana, sans-serif;
+    /*border: 1px solid #999;*/
+	position:relative;
+	overflow:visible;
+}
+
+#hole-1 {
+	top:180px;
+	left:230px;
+}
+#hole-2 {
+	top:190px;
+	left:145px;
+}
+#hole-3 {
+	top:130px;
+	left:260px;
+}
+#hole-4 {
+	top:130px;
+	left:270px;
+}
+#hole-5 {
+	top:100px;
+	left:345px;
+}
+#hole-6 {
+	top:75px;
+	left:273px;
+}
+#hole-7 {
+	top:95px;
+	left:253px;
+}
+#hole-8 {
+	top:30px;
+	left:383px;
+}
+#hole-9 {
+	top:25px;
+	left:365px;
+}
+#hole-10 {
+	top:-5px;
+	left:305px;
 }
 
 .hole.on {
     cursor: pointer;
-    background-color: #A1BB79;
+    overflow:visible;
+}
+
+#hole-1.hole.on {
+    background-image:url('../images/People1.png');
+}
+#hole-2.hole.on {
+    background-image:url('../images/People2.png');
+}
+#hole-3.hole.on {
+    background-image:url('../images/People3.png');
+}
+#hole-4.hole.on {
+    background-image:url('../images/People4.png');
+}
+#hole-5.hole.on {
+	background-image:url('../images/People5.png');
+}
+#hole-6.hole.on {
+	background-image:url('../images/People6.png');
+}
+#hole-7.hole.on {
+	background-image:url('../images/People7.png');
+}
+#hole-8.hole.on {
+	background-image:url('../images/People8.png');
+}
+#hole-9.hole.on {
+	background-image:url('../images/People9.png');
+}
+#hole-10.hole.on {
+	background-image:url('../images/People10.png');
 }
 
 .columns {
