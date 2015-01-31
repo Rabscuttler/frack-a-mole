@@ -146,6 +146,10 @@ h1, h2, h3, h4, h5, h6 {
     text-align: center;
 }
 
+p {
+    font-size: 150%;
+}
+
 
 
 /*First page */
@@ -171,6 +175,11 @@ div.play-button {
 .top-buffer { 
     margin-top:20px; 
 }
+
+.padded {
+    padding: 30px;
+}
+
 
 <<<<<<< Updated upstream
 =======
