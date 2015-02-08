@@ -8,7 +8,7 @@ var frackamole = new Object({
     'count': 10, // total count (auto set on create)
     'seconds': 0, // start
     'time': 20, // max seconds
-    'timeout': 1000, // timeout id
+    'timeout': 0, // timeout id
     'duration': 2000, // ms protest appears - actually set at the end at reset
     'difficulty': 30, // time changes per protest 
     'points': 0,
@@ -53,6 +53,7 @@ var frackamole = new Object({
         var frackingProtest = (toggle == 'on' ? ' on' : '');
         var hole = document.getElementById('hole-' + id);
         hole.className = 'hole' + frackingProtest;
+
         if (toggle == 'on') {
             // clear after interval
             this.seconds++;

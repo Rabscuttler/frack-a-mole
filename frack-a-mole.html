@@ -32,5 +32,18 @@
 		</div>
 	</div>
 	<script type="text/javascript" src="js/game.js"></script>
+	<script>
+	$.fn.preload = function() {
+	    this.each(function(){
+	        $('<img/>')[0].src = this;
+	    });
+	}
+	$(['images/People1.png','images/People2.png','images/People3.png', 
+	  'images/People4.png','images/People5.png','images/People6.png',
+	  'images/People7.png','images/People8.png','images/People9.png',
+	  'images/People10.png','Splat1.png','Splat2.png','Splat3.png','Splat4.png',
+	  'Splat5.png','Splat6.png','Splat7.png','Splat8.png','Splat9.png',
+	  'Splat10.png']).preload();
+  </script>
 </body>
 </html>
