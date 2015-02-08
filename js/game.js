@@ -8,31 +8,26 @@ var frackamole = new Object({
     'count': 10, // total count (auto set on create)
     'seconds': 0, // start
     'time': 20, // max seconds
-    'timeout': null, // timeout id
-    'duration': 1000, // how many ms hole will be on
-    'difficulty': 10, // how many ms hole-on-duration will decrease each step 
+    'timeout': 1000, // timeout id
+    'duration': 2000, // ms protest appears - actually set at the end at reset
+    'difficulty': 30, // time changes per protest 
     'points': 0,
 
-// Initialise the holes in predetermined positions on the map
-
-    // Put the holes on the UK map
+    // Initialise the holes on the UK map
     'createHoles': function() {
         var m = document.getElementById('map');
-
         var e = null, id = 1; // element and it's id
             for (var c = 0; c < this.count; c++) {
                 e = document.createElement('div'); // create element
                 e.className = 'hole';
                 e.id = 'hole-' + id;
                 m.appendChild(e); // add to map
-
                 // add onclick event
                 if (e.attachEvent) {
                     td.attachEvent('onclick', 'frackamole.clickHole(' + id + ')');
                 } else {
                     e.setAttribute('onclick', 'frackamole.clickHole(' + id + ')');
                 }
-
                 id++;
             }
     },
@@ -42,12 +37,12 @@ var frackamole = new Object({
         if (hole.className != 'hole') {
             this.points += 10;
             document.getElementById('score').innerHTML = this.points;
-            hole.className = 'hole'; // prevent multiple clicking
+            hole.className = 'hole on splat'; // click to splat
         }
     },
 
     // no params - initialize
-    'highlightHole': function(id, toggle) {
+    'protest': function(id, toggle) {
         if (typeof id === 'undefined') {
             // initialize
             id = this.generateRandom();
@@ -55,23 +50,24 @@ var frackamole = new Object({
         }
         toggle = toggle || 'off';
 
-        var colorClass = (toggle == 'on' ? ' on' : '');
+        var frackingProtest = (toggle == 'on' ? ' on' : '');
         var hole = document.getElementById('hole-' + id);
-        hole.className = 'hole' + colorClass;
+        hole.className = 'hole' + frackingProtest;
         if (toggle == 'on') {
             // clear after interval
             this.seconds++;
             this.timeout = setTimeout(function() {
-                frackamole.highlightHole(id)
+                frackamole.protest(id)
             }, this.duration);
-            this.duration -= this.difficulty;
+            console.log(this.duration);
+            this.duration -= difficulty;
         } else {
             // highlight new hole
             var rand = this.generateRandom();
             if (this.seconds < this.time) {
                 this.timeout = setTimeout(function() {
-                    frackamole.highlightHole(rand, 'on')
-                }, 100);
+                    frackamole.protest(rand, 'on')
+                }, 500);
             }
         }
     },
@@ -89,14 +85,14 @@ var frackamole = new Object({
 
     'newGame': function() {
         this.resetGame();
-        this.highlightHole();
+        this.protest();
     },
 
     'resetGame': function() {
         clearTimeout(this.timeout);
         this.seconds = 0;
         this.points = 0;
-        this.duration = 1000;
+        this.duration = 2000;
         document.getElementById('score').innerHTML = 0;
         this.resetHoles();
     }

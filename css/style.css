@@ -10,8 +10,7 @@ input {
     margin: 10px 0px;
     min-width: 500px;
     min-height:620px;
-    /*border-radius: 20px;*/
-    /*border: 1px solid #999;*/
+    border-radius: 20px;
     background-image:url('../images/UKFrackingMapwithHoles.png');
     background-repeat:no-repeat;
 }
@@ -22,7 +21,6 @@ input {
     margin: 2px;
     cursor: pointer;
     text-align: center;
-    /*border: 1px solid #999;*/
 	position:relative;
 }
 
@@ -103,13 +101,42 @@ input {
 	background-image:url('../images/People10.png');
 }
 
+#hole-1.hole.on.splat {
+    background-image:url('../images/Splat1.png');
+}
+#hole-2.hole.on.splat {
+    background-image:url('../images/Splat2.png');
+}
+#hole-3.hole.on.splat {
+    background-image:url('../images/Splat3.png');
+}
+#hole-4.hole.on.splat {
+    background-image:url('../images/Splat4.png');
+}
+#hole-5.hole.on.splat {
+    background-image:url('../images/Splat5.png');
+}
+#hole-6.hole.on.splat {
+    background-image:url('../images/Splat6.png');
+}
+#hole-7.hole.on.splat {
+    background-image:url('../images/Splat7.png');
+}
+#hole-8.hole.on.splat {
+    background-image:url('../images/Splat8.png');
+}
+#hole-9.hole.on.splat {
+    background-image:url('../images/Splat9.png');
+}
+#hole-10.hole.on.splat {
+    background-image:url('../images/Splat10.png');
+}
 
 h1, h2, h3, h4, h5, h6 {
     text-align: center;
 }
 
 /*First page */
-
 div.intro-box {
     padding-top:50px;
     padding-bottom: 50px;
