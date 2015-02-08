@@ -10,7 +10,6 @@
 <META HTTP-EQUIV="Content-Language" CONTENT="en">
 <META HTTP-EQUIV="Creation-Date" CONTENT="30-01-2015">
 <META HTTP-EQUIV="Version" CONTENT="0.1">
-<BASE HREF="http://www.frack-a-mole.co.uk">
 <META HTTP-EQUIV="Page URL" CONTENT="www.frack-a-mole.co.uk">
 	<link rel="stylesheet" type="text/css" href="css/normalize.css" media="all" />
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" media="all" />
@@ -21,16 +20,14 @@
 <body>
 	<div class="container">
 		<div class="row">
-			<div class="col-xs-6">
-				<h1>Frack-A-Mole</h1>
-			</div>
-			<div class="col-xs-6">
-				<h4>Score: <strong id="score">0</strong>&nbsp;points</h4>
-				<input type="button" value="Start" onclick="frackamole.newGame();" />
-				<input type="button" value="Reset" onclick="frackamole.resetGame();" />
-			</div>
-			<div class="col-xs-12">
-				<div id="map"></div>
+			<div class="col-xs-12 col-sm-6 col-sm-offset-3 col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3">
+				<div id="map">
+					<h4 class="pull-left">
+						Score: <strong id="score">0</strong>&nbsp;points
+					</h4>
+					<input type="button" class="pull-right controls" value="Start" onclick="frackamole.newGame();" />
+					<input type="button" class="pull-right controls" value="Reset" onclick="frackamole.resetGame();" />
+				</div>
 			</div>
 		</div>
 	</div>

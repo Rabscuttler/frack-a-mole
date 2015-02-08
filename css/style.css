@@ -10,8 +10,8 @@ input {
     margin: 10px 0px;
     min-width: 500px;
     min-height:620px;
-    border-radius: 20px;
-    border: 1px solid #999;
+    /*border-radius: 20px;*/
+    /*border: 1px solid #999;*/
     background-image:url('../images/UKFrackingMapwithHoles.png');
     background-repeat:no-repeat;
 }
@@ -121,4 +121,8 @@ div.play-button {
 
 .inline {
     display: inline-block;
+}
+
+.controls {
+    margin:5px;
 }
