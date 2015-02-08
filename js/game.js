@@ -1,7 +1,5 @@
 /*
-
-	Frack-A-Mole
-	
+	Frack-A-Mole	
 */
 
 var frackamole = new Object({
