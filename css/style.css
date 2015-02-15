@@ -132,11 +132,28 @@ input {
     background-image:url('../images/Splat10.png');
 }
 
+/* Global */
+
+body { 
+  background: url('../images/background.jpg') no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+
 h1, h2, h3, h4, h5, h6 {
     text-align: center;
 }
 
+
+p {
+    font-size: 150%;
+}
+
 /*First page */
+
 div.intro-box {
     padding-top:50px;
     padding-bottom: 50px;
@@ -146,10 +163,19 @@ div.play-button {
     text-align: center;
 }
 
+/* HELPERS */
 .inline {
     display: inline-block;
 }
 
-.controls {
-    margin:5px;
+.transparent-background {
+    background: rgba(255,255,255,0.9);
+}
+
+.top-buffer { 
+    margin-top:20px; 
+}
+
+.padded {
+    padding: 30px;
 }
