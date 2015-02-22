@@ -132,6 +132,14 @@ input {
     background-image:url('../images/Splat10.png');
 }
 
+/* Countdown big numbers */
+.big-number {
+    font-size: 500%;
+    position:absolute;
+    color: red;
+    text-shadow: 20px 20px yellow;
+}
+
 /* Global */
 
 body { 

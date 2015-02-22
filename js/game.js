@@ -94,8 +94,40 @@ var frackamole = new Object({
         this.duration = 2000;
         document.getElementById('score').innerHTML = 0;
         this.resetHoles();
+    },
+
+    'bigCountdown': function(i){
+        var $el = $('<div class="big-number">'+i+'</div>');
+        var frackamole = this;
+
+        // stop scroll bars
+        $('body').css({'overflow':'hidden'});
+
+        $el.appendTo($('body'));
+        $el.animate({'font-size': '12000%', opacity: 0},{
+            duration: 350,
+            step: function(){
+                $(this).css({
+                    left: ($(window).width() - $el.outerWidth()) / 2,
+                    top: ($(window).height() - $el.outerHeight()) / 2
+                });
+            },
+            complete: function(){
+                $(this).remove();
+                if (i>1){
+                    setTimeout(function(){frackamole.bigCountdown(i-1);},650);
+                } else {
+                    //Give back scroll bars
+                    $('body').css({'overflow':'inherit'});
+                    setTimeout(function(){frackamole.newGame();},1000);
+                }
+            },
+            easing: 'linear'
+        });
     }
 });
 
-
-frackamole.createHoles();
+$(document).ready(function(){
+    frackamole.createHoles();
+    setTimeout(function(){frackamole.bigCountdown(5);},1500);
+})
