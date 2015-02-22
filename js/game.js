@@ -67,8 +67,24 @@ var frackamole = new Object({
                 this.timeout = setTimeout(function() {
                     frackamole.protest(rand, 'on')
                 }, 500);
+            } else {
+                this.bigCountdown(-1);
             }
         }
+    },
+
+    'updateTimer': function(){
+        $timer = $('#timer div');
+        var percentageLeft = 100*(1 - this.seconds/this.time);
+
+        if (percentageLeft < 25) {
+            $timer
+                .removeClass('progress-bar-success')
+                .addClass('progress-bar-warning');
+        }
+
+        $timer.css('width',percentageLeft + '%');
+        console.log('timer', percentageLeft);
     },
 
     'resetHoles': function() {
@@ -96,7 +112,9 @@ var frackamole = new Object({
             });
         });
 
-        this.protest();
+        setInterval(function(){frackamole.updateTimer();}, 200);
+
+        this.protest();        
     },
 
     'resetGame': function() {
@@ -111,6 +129,8 @@ var frackamole = new Object({
     'bigCountdown': function(i){
         if (i > 0) {
             var $el = $('<div class="big-number">'+i+'</div>');
+        } else if (i == -1) {
+            var $el = $('<div class="big-number">TIME UP</div>');
         } else {
             var $el = $('<div class="big-number">FRACK</div>');
         }
@@ -133,6 +153,8 @@ var frackamole = new Object({
                 $(this).remove();
                 if (i>0){
                     setTimeout(function(){frackamole.bigCountdown(i-1);},650);
+                } else if (i == -1) {
+                    setTimeout(function(){location.href='thanks.html';},650);
                 } else {
                     //Give back scroll bars
                     $('body').css({'overflow':'inherit'});
@@ -146,5 +168,5 @@ var frackamole = new Object({
 
 $(document).ready(function(){
     frackamole.createHoles();
-    setTimeout(function(){frackamole.bigCountdown(5);},1500);
-})
+    setTimeout(function(){frackamole.bigCountdown(3);},1000);
+});

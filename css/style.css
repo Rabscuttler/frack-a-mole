@@ -14,6 +14,7 @@ input {
     background-image:url('../images/UKFrackingMapwithHoles.png');
     background-repeat:no-repeat;
     cursor: none;
+    position: relative;
 }
 
 /* cursor element */
@@ -24,6 +25,31 @@ input {
     height: 239px;
     cursor: none;
 }
+
+#time {
+    position:absolute;
+    bottom: 0px;
+    left: 0px;
+    padding: 10px;
+    width: 90%;
+}
+
+#timer-label {
+    display: inline-block;
+    width: 20%;
+    vertical-align: top;
+}
+
+#timer-label span {
+    font-size: 2.5em;
+}
+
+#timer {
+    display: inline-block;
+    width: 70%;
+}
+
+
 
 .hole {
     width: 50px;
