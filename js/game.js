@@ -84,6 +84,18 @@ var frackamole = new Object({
 
     'newGame': function() {
         this.resetGame();
+
+        // set cursor to fracking rig
+
+        var $el = $('<div id="fracking-rig">&nbsp;</div>').appendTo('body');
+
+        $('#map, #fracking-rig').on('mousemove', function(e){
+            $el.css({
+                left:  e.pageX - 100,
+                top:   e.pageY - 240
+            });
+        });
+
         this.protest();
     },
 
@@ -97,7 +109,12 @@ var frackamole = new Object({
     },
 
     'bigCountdown': function(i){
-        var $el = $('<div class="big-number">'+i+'</div>');
+        if (i > 0) {
+            var $el = $('<div class="big-number">'+i+'</div>');
+        } else {
+            var $el = $('<div class="big-number">FRACK</div>');
+        }
+        
         var frackamole = this;
 
         // stop scroll bars
@@ -114,7 +131,7 @@ var frackamole = new Object({
             },
             complete: function(){
                 $(this).remove();
-                if (i>1){
+                if (i>0){
                     setTimeout(function(){frackamole.bigCountdown(i-1);},650);
                 } else {
                     //Give back scroll bars
