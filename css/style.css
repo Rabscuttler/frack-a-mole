@@ -5,6 +5,7 @@ input {
 }
 
 #map {
+    z-index:0;
     clear: both;
     padding: 10px;
     margin: 10px 0px;
@@ -19,9 +20,9 @@ input {
 /* cursor element */
 #fracking-rig {
     position: absolute;
-    background: url('../images/cursor.png') no-repeat;
-    width: 260px;
-    height: 239px;
+    background: url('../images/cursorReticle.png') no-repeat;
+    width: 200px;
+    height: 200px;
     cursor: none;
 }
 
@@ -49,54 +50,53 @@ input {
 }
 
 .hole {
-    width: 50px;
-    height: 50px;
+    width: 250px;
+    height: 200px;
     margin: 2px;
     cursor: none;
     text-align: center;
-	position:relative;
-    border: 1px red solid;
+	position:absolute;
 }
 
 #hole-1 {
-	top:180px;
-	left:230px;
+top: 83px;
+left: 188px;
 }
 #hole-2 {
-	top:190px;
-	left:145px;
+top: 144px;
+left: 90px;
 }
 #hole-3 {
-	top:130px;
-	left:260px;
+top: 80px;
+left: 194px;
 }
 #hole-4 {
-	top:130px;
-	left:270px;
+top: 176px;
+left: 210px;
 }
 #hole-5 {
-	top:100px;
-	left:345px;
+top: 204px;
+left: 228px;
 }
 #hole-6 {
-	top:75px;
-	left:273px;
+top: 245px;
+left: 163px;
 }
 #hole-7 {
-	top:95px;
-	left:253px;
+top: 310px;
+left: 252px;
 }
 #hole-8 {
-	top:30px;
-	left:383px;
+top: 333px;
+left: 96px;
 }
 #hole-9 {
-	top:25px;
-	left:365px;
+top: 337px;
+left: 246px;
 }
 #hole-10 {
-	top:-5px;
-	left:305px;
+top: 364px;
+left: 238px;
 }
 
 .hole.on {

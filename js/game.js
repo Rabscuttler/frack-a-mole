@@ -10,6 +10,7 @@ var frackamole = new Object({
     'duration': 2000, // ms protest appears - actually set at the end at reset
     'difficulty': 30, // time changes per protest 
     'points': 0,
+    'zindex':5,
 
     // Initialise the holes on the UK map
     'createHoles': function() {
@@ -50,8 +51,11 @@ var frackamole = new Object({
 
         var frackingProtest = (toggle == 'on' ? ' on' : '');
         var hole = document.getElementById('hole-' + id);
-        hole.append('<img src=../images/Group' + id + 'png')
-        // hole.className = 'hole' + frackingProtest;
+        // var inner = '<img src=../images/Group' + id + '.png>';
+        // $(hole).append(inner);
+        hole.className = 'hole' + frackingProtest;
+        hole.style.zIndex = this.zindex;
+        this.zindex += 1;
 
         if (toggle == 'on') {
             // clear after interval
@@ -108,8 +112,8 @@ var frackamole = new Object({
 
         $('#map, #fracking-rig').on('mousemove', function(e){
             $el.css({
-                left:  e.pageX - 100,
-                top:   e.pageY - 240
+                left:  e.pageX - 50,
+                top:   e.pageY - 200
             });
         });
 
@@ -169,7 +173,7 @@ var frackamole = new Object({
 
 $(document).ready(function(){
     frackamole.createHoles();
-    // setTimeout(function(){frackamole.bigCountdown(3);},1000);
-    setTimeout(function(){frackamole.newGame();},1000);
+    setTimeout(function(){frackamole.bigCountdown(3);},1000);
+    // setTimeout(function(){frackamole.newGame();},1000);
 
 });
