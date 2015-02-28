@@ -7,75 +7,163 @@
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" media="all" />
 	<link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css" media="all" />
 	<link rel="stylesheet" type="text/css" href="css/style.css" media="all" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
 </head>
 <body>
-<div class="container">
-	<div class="row" id="top-bar">
-		<div class="col-xs-12" style="text-align: right;">
-			<div class="inline">
-				<p class="inline">Get more stuff like this:</p>
-				<form class="inline">
-					<input type="text" placeholder="abc@example.com">
-					<button type="submit">Sign me up</button>
-				</form>
+	<div class="container">
+		<div class="row" id="top-bar">
+			<div class="col-xs-12" style="text-align: right;">
+				<div class="inline">
+					<p class="inline">Get more stuff like this:</p>
+					<form class="inline">
+						<input type="text" placeholder="abc@example.com">
+						<button type="submit">Sign me up</button>
+					</form>
+				</div>
 			</div>
 		</div>
-	</div>
-	<div class="row">
-		<div class="col-xs-12 col-sm-8">
-			<div class="center">
-				<h2 class="fancy-header">Bad luck George!</h2>
-				<h4>You crushed a lot of pesky protests, which wins you a 
-				top table seat at Cuadrilla’s next society ball, but sadly isn’t 
-				enough to overcome:</h4>
-				<ul>
-				  <li>Overwhelming public opposition</li>
-				  <ul>
-				    <li>A quarter of a million people signed a petition against fracking, George. Smells worryingly like democracy.</li>
-				    <li>99% of respondents to a Government consultation opposed changes to the trespass law to allow drilling under people’s homes. Democr… oh what’s the point.</li>
-				    <li>Just 25% of people say they support fracking (25% isn’t a majority, George - you’re supposed to be a numbers man!) and only 10% when it’s proposed near their homes </li>
-				    <li>Three times as many people say they'd prefer to live near a wind farm than a fracking rig. Rather makes a mockery of all your anti-wind huffing and puffing, eh?</li>
-				  </ul>
-				  <li>Health concerns</li>
-				  <ul>
-				    <li>What’s that? New York banned fracking altogether after the Public Health Commissioner found “serious health risks”? Don’t they have private healthcare for that sort of thing?</li>
-				    <li>Breast Cancer UK has concerns about the potentially adverse health effects of increased exposure to harmful fracking chemicals. But hey, fracking’s big and VERY clever.</li>
-				  </ul>
-				  <li>Climate change risks</li>
-				  <ul>
-				    <li>To stand a reasonable chance of avoiding dangerous temperature rises, the world cannot burn more than a fifth of existing fossil fuel reserves. Scary stuff, so let’s not pursue even more ways to splurge CO2 into the atmosphere, eh?</li>
-				    <li>As former UK climate diplomat John Ashton recently said, “You can be in favour of fracking, and you can be in favour of tackling climate change, but you can't be in favour of both.” Go figure.</li>
-				  </ul>
-				  <li>Earthquakes!</li>
-				  <ul>
-				    <li>You’ve done your best to slip this one under the carpet, but the only fracking yet to take place in the UK was the likely cause of earthquakes in Blackpool in 2011. Who cares about the desolate north though? They don’t even have a London up there!</li>
-				  </ul>
-				  <li>Jobs, or the lack of them</li>
-				  <ul>
-				    <li>People want real jobs George, lots of them. Insulating homes in the North West could create nearly 10 000 jobs in 5 years, for instance. Whereas your bluds at Cuadrilla say the 6-year fracking project proposed in Lancashire would muster up just 11 jobs per site. I know you like the number 11, George, but come on.</li>
-				  </ul>
-				  <li>Lessons from around the world</li>
-				  <ul>
-				    <li>Scotland has blocked fracking, Wales says it might. Germany, France and the Netherlands all have bans and even Denton, Texas, the birthplace of fracking, has changed it’s mind. You’re fracking the wrong horse, George. Giddy-up!</li>
-				  </ul>
-				  <li>The ‘nannas’ of lancashire</li>
-				  <ul>
-				    <li>Know when you’re beaten, George. You’ll never defeat the amazing group of grandmothers standing up to your frackhead buddies.</li>
-				  </ul>
-				</ul>
-			</div>
-		</div>
-		<div class="col-xs-12 col-sm-3 text-center">
-			<div>
-				<br><br>
-				<img src="images/george-osborne-looking-evil.png">
-			</div>
-		</div>
-		<div class="one column">&nbsp;</div>
-	</div>
-	<div class="row">
-	</div>
+		<div class="row">
+			<div class="col-xs-12 col-sm-8">
+				<div class="transparent-background padded">
+					<h2 class="fancy-header">Bad luck George!</h2>
+					<h4>You crushed a lot of pesky protests, which wins you a 
+						top table seat at Cuadrilla’s next society ball, but sadly isn’t 
+						enough to overcome:</h4>
+						<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+							<div class="panel panel-default">
+								<div class="panel-heading" role="tab" id="headingOne">
+									<h4 class="panel-title">
+										<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+											Overwhelming public opposition
+										</a>
+									</h4>
+								</div>
+								<div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+									<div class="panel-body">
+										<ul>
+											<li>A quarter of a million people signed a petition against fracking, George. Smells worryingly like democracy.</li>
+											<li>99% of respondents to a Government consultation opposed changes to the trespass law to allow drilling under people’s homes. Democr… oh what’s the point.</li>
+											<li>Just 25% of people say they support fracking (25% isn’t a majority, George - you’re supposed to be a numbers man!) and only 10% when it’s proposed near their homes </li>
+											<li>Three times as many people say they'd prefer to live near a wind farm than a fracking rig. Rather makes a mockery of all your anti-wind huffing and puffing, eh?</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>	
+						<div class="panel panel-default">
+							<div class="panel-heading" role="tab" id="headingTwo">
+								<h4 class="panel-title">
+									<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+										Climate change risks
+									</a>
+								</h4>
+							</div>
+							<div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+								<div class="panel-body">
+									<ul>
+										<li>To stand a reasonable chance of avoiding dangerous temperature rises, the world cannot burn more than a fifth of existing fossil fuel reserves. Scary stuff, so let’s not pursue even more ways to splurge CO2 into the atmosphere, eh?</li>
+										<li>As former UK climate diplomat John Ashton recently said, “You can be in favour of fracking, and you can be in favour of tackling climate change, but you can't be in favour of both.” Go figure.</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="panel panel-default">
+							<div class="panel-heading" role="tab" id="headingThree">
+								<h4 class="panel-title">
+									<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+										Health concerns
+									</a>
+								</h4>
+							</div>
+							<div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+								<div class="panel-body">
+									<ul>
+										<li>What’s that? New York banned fracking altogether after the Public Health Commissioner found “serious health risks”? Don’t they have private healthcare for that sort of thing?</li>
+										<li>Breast Cancer UK has concerns about the potentially adverse health effects of increased exposure to harmful fracking chemicals. But hey, fracking’s big and VERY clever.</li>
+									</ul>
+								</div>
+							</div>
+						</div><div class="panel panel-default">
+						<div class="panel-heading" role="tab" id="headingFour">
+							<h4 class="panel-title">
+								<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+									Earthquakes!
+								</a>
+							</h4>
+						</div>
+						<div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
+							<div class="panel-body">
+								<ul>
+									<li>You’ve done your best to slip this one under the carpet, but the only fracking yet to take place in the UK was the likely cause of earthquakes in Blackpool in 2011. Who cares about the desolate north though? They don’t even have a London up there!</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="panel panel-default">
+						<div class="panel-heading" role="tab" id="headingFive">
+							<h4 class="panel-title">
+								<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+									Jobs, or the lack of them
+								</a>
+							</h4>
+						</div>
+						<div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
+							<div class="panel-body">
+								<ul>
+									<li>People want real jobs George, lots of them. Insulating homes in the North West could create nearly 10 000 jobs in 5 years, for instance. Whereas your bluds at Cuadrilla say the 6-year fracking project proposed in Lancashire would muster up just 11 jobs per site. I know you like the number 11, George, but come on.</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="panel panel-default">
+						<div class="panel-heading" role="tab" id="headingSix">
+							<h4 class="panel-title">
+								<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+									Lessons from around the world
+								</a>
+							</h4>
+						</div>
+						<div id="collapseSix" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSix">
+							<div class="panel-body">
+								<ul>
+									<li>Scotland has blocked fracking, Wales says it might. Germany, France and the Netherlands all have bans and even Denton, Texas, the birthplace of fracking, has changed it’s mind. You’re fracking the wrong horse, George. Giddy-up!</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="panel panel-default">
+						<div class="panel-heading" role="tab" id="headingSeven">
+							<h4 class="panel-title">
+								<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+									The ‘nannas’ of lancashire
+								</a>
+							</h4>
+						</div>
+						<div id="collapseSeven" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSeven">
+							<div class="panel-body">
+								<ul>
+									<li>Know when you’re beaten, George. You’ll never defeat the amazing group of grandmothers standing up to your frackhead buddies.</li>
+								</ul>
+							</div>
+						</div>
+					</div>
 
-</div>
+
+
+				</div>
+			</div>
+			<div class="col-xs-12 col-sm-3 text-center">
+				<div>
+					<br><br>
+					<img src="images/george-osborne-looking-evil.png">
+				</div>
+			</div>
+			<div class="one column">&nbsp;</div>
+		</div>
+		<div class="row">
+		</div>
+
+	</div>
 </body>
 </html>

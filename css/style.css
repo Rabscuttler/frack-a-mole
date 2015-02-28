@@ -87,8 +87,8 @@ top: 310px;
 left: 252px;
 }
 #hole-8 {
-top: 333px;
-left: 96px;
+top: 331px;
+left: 103px;
 }
 #hole-9 {
 top: 337px;
@@ -133,7 +133,6 @@ left: 238px;
 #hole-10.hole.on {
 	background-image:url('../images/Group10.png');
 }
-
 #hole-1.hole.on.splat {
     background-image:url('../images/Group1_splat.png');
 }
@@ -219,4 +218,9 @@ div.play-button {
 
 .padded {
     padding: 30px;
+}
+
+/*Thanks page*/
+
+h4 .panel-title {
 }

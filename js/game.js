@@ -173,7 +173,7 @@ var frackamole = new Object({
 
 $(document).ready(function(){
     frackamole.createHoles();
-    setTimeout(function(){frackamole.bigCountdown(3);},1000);
-    // setTimeout(function(){frackamole.newGame();},1000);
+    // setTimeout(function(){frackamole.bigCountdown(3);},1000);
+    setTimeout(function(){frackamole.newGame();},1000);
 
 });
