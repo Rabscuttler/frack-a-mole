@@ -7,8 +7,8 @@ var frackamole = new Object({
     'seconds': 0, // start
     'time': 20, // max seconds
     'timeout': 0, // timeout id
-    'duration': 1800, // ms protest appears - actually set at the end at reset
-    'difficulty': 50, // time changes per protest 
+    'duration': 1950, // ms protest appears - actually set at the end at reset
+    'difficulty': 75, // time changes per protest 
     'points': 0,
     'zindex':5,
 
@@ -126,7 +126,7 @@ var frackamole = new Object({
         clearTimeout(this.timeout);
         this.seconds = 0;
         this.points = 0;
-        this.duration = 1200;
+        this.duration = 1500;
         document.getElementById('score').innerHTML = 0;
         this.resetHoles();
     },
@@ -147,7 +147,7 @@ var frackamole = new Object({
 
         $el.appendTo($('body'));
         $el.animate({'font-size': '12000%', opacity: 0},{
-            duration: 350,
+            duration: 500,
             step: function(){
                 $(this).css({
                     left: ($(window).width() - $el.outerWidth()) / 2,
