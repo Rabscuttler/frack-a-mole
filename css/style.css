@@ -10,7 +10,6 @@ input {
     margin: 10px 0px;
     min-width: 500px;
     min-height:620px;
-    border-radius: 20px;
     background-image:url('../images/UKFrackingMapwithHoles.png');
     background-repeat:no-repeat;
     cursor: none;
@@ -48,8 +47,6 @@ input {
     display: inline-block;
     width: 70%;
 }
-
-
 
 .hole {
     width: 50px;
@@ -106,65 +103,65 @@ input {
 }
 
 #hole-1.hole.on {
-    background-image:url('../images/People1.png');
+    background-image:url('../images/Group1.png');
 }
 #hole-2.hole.on {
-    background-image:url('../images/People2.png');
+    background-image:url('../images/Group2.png');
 }
 #hole-3.hole.on {
-    background-image:url('../images/People3.png');
+    background-image:url('../images/Group3.png');
 }
 #hole-4.hole.on {
-    background-image:url('../images/People4.png');
+    background-image:url('../images/Group4.png');
 }
 #hole-5.hole.on {
-	background-image:url('../images/People5.png');
+	background-image:url('../images/Group5.png');
 }
 #hole-6.hole.on {
-	background-image:url('../images/People6.png');
+	background-image:url('../images/Group6.png');
 }
 #hole-7.hole.on {
-	background-image:url('../images/People7.png');
+	background-image:url('../images/Group7.png');
 }
 #hole-8.hole.on {
-	background-image:url('../images/People8.png');
+	background-image:url('../images/Group8.png');
 }
 #hole-9.hole.on {
-	background-image:url('../images/People9.png');
+	background-image:url('../images/Group9.png');
 }
 #hole-10.hole.on {
-	background-image:url('../images/People10.png');
+	background-image:url('../images/Group10.png');
 }
 
 #hole-1.hole.on.splat {
-    background-image:url('../images/Splat1.png');
+    background-image:url('../images/Group1_splat.png');
 }
 #hole-2.hole.on.splat {
-    background-image:url('../images/Splat2.png');
+    background-image:url('../images/Group2_splat.png');
 }
 #hole-3.hole.on.splat {
-    background-image:url('../images/Splat3.png');
+    background-image:url('../images/Group3_splat.png');
 }
 #hole-4.hole.on.splat {
-    background-image:url('../images/Splat4.png');
+    background-image:url('../images/Group4_splat.png');
 }
 #hole-5.hole.on.splat {
-    background-image:url('../images/Splat5.png');
+    background-image:url('../images/Group5_splat.png');
 }
 #hole-6.hole.on.splat {
-    background-image:url('../images/Splat6.png');
+    background-image:url('../images/Group6_splat.png');
 }
 #hole-7.hole.on.splat {
-    background-image:url('../images/Splat7.png');
+    background-image:url('../images/Group7_splat.png');
 }
 #hole-8.hole.on.splat {
-    background-image:url('../images/Splat8.png');
+    background-image:url('../images/Group8_splat.png');
 }
 #hole-9.hole.on.splat {
-    background-image:url('../images/Splat9.png');
+    background-image:url('../images/Group9_splat.png');
 }
 #hole-10.hole.on.splat {
-    background-image:url('../images/Splat10.png');
+    background-image:url('../images/Group10_splat.png');
 }
 
 /* Countdown big numbers */
