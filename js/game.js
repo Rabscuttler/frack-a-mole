@@ -5,10 +5,10 @@
 var frackamole = new Object({
     'count': 10, // total count (auto set on create)
     'seconds': 0, // start
-    'time': 8, // max seconds
+    'time': 20, // max seconds
     'timeout': 0, // timeout id
-    'duration': 2000, // ms protest appears - actually set at the end at reset
-    'difficulty': 10, // time changes per protest 
+    'duration': 1800, // ms protest appears - actually set at the end at reset
+    'difficulty': 50, // time changes per protest 
     'points': 0,
     'zindex':5,
 
@@ -64,7 +64,7 @@ var frackamole = new Object({
                 frackamole.protest(id)
             }, this.duration);
             console.log(this.duration);
-            this.duration -= difficulty;
+            this.duration -= this.difficulty;
         } else {
             // highlight new hole
             var rand = this.generateRandom();
@@ -126,7 +126,7 @@ var frackamole = new Object({
         clearTimeout(this.timeout);
         this.seconds = 0;
         this.points = 0;
-        this.duration = 2000;
+        this.duration = 1200;
         document.getElementById('score').innerHTML = 0;
         this.resetHoles();
     },
@@ -159,7 +159,7 @@ var frackamole = new Object({
                 if (i>0){
                     setTimeout(function(){frackamole.bigCountdown(i-1);},650);
                 } else if (i == -1) {
-                    setTimeout(function(){location.href='thanks.html';},650);
+                    setTimeout(function(){location.href='thanks';},650);
                 } else {
                     //Give back scroll bars
                     $('body').css({'overflow':'inherit'});
@@ -173,7 +173,7 @@ var frackamole = new Object({
 
 $(document).ready(function(){
     frackamole.createHoles();
-    // setTimeout(function(){frackamole.bigCountdown(3);},1000);
-    setTimeout(function(){frackamole.newGame();},1000);
+    setTimeout(function(){frackamole.bigCountdown(3);},1000);
+    // setTimeout(function(){frackamole.newGame();},1000);
 
 });

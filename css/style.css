@@ -45,6 +45,7 @@ input {
 #timer {
     display: inline-block;
     width: 70%;
+    margin-top:20px;
 }
 
 .hole {
@@ -99,6 +100,22 @@ left: 238px;
 
 .hole.on {
     background-size: contain;
+}
+
+.hole.on {
+  -webkit-transition:all 0.5s ease-out;
+  -moz-transition:all 0.5s ease-out;
+  -ms-transition:all 0.5s ease-out;
+  -o-transition:all 0.5s ease-out;
+  transition:all 0.5s ease-out;
+}
+
+.hole.on:hover {
+  -webkit-transform:scale(1.1);
+  -moz-transform:scale(1.1);
+  -ms-transform:scale(1.1);
+  -o-transform:scale(1.1);
+  transform:scale(1.1);
 }
 
 #hole-1.hole.on {
