@@ -2,6 +2,9 @@
 	Frack-A-Mole	
 */
 
+var squish = new Audio("../squish.wav"); // buffers automatically when created
+var moan = new Audio("../moan.wav");
+
 var frackamole = new Object({
     'count': 10, // total count (auto set on create)
     'seconds': 0, // start
@@ -37,6 +40,7 @@ var frackamole = new Object({
             this.points += 10;
             document.getElementById('score').innerHTML = this.points;
             hole.className = 'hole on splat'; // click to splat
+            squish.play();
         }
     },
 
@@ -158,6 +162,7 @@ var frackamole = new Object({
                 if (i>0){
                     setTimeout(function(){frackamole.bigCountdown(i-1);},650);
                 } else if (i == -1) {
+                    moan.play();
                     setTimeout(function(){location.href='thanks';},650);
                 } else {
                     //Give back scroll bars
