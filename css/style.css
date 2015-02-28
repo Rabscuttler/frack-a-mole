@@ -55,6 +55,7 @@ input {
     cursor: none;
     text-align: center;
 	position:relative;
+    border: 1px red solid;
 }
 
 #hole-1 {

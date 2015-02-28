@@ -50,7 +50,8 @@ var frackamole = new Object({
 
         var frackingProtest = (toggle == 'on' ? ' on' : '');
         var hole = document.getElementById('hole-' + id);
-        hole.className = 'hole' + frackingProtest;
+        hole.append('<img src=../images/Group' + id + 'png')
+        // hole.className = 'hole' + frackingProtest;
 
         if (toggle == 'on') {
             // clear after interval
@@ -168,5 +169,7 @@ var frackamole = new Object({
 
 $(document).ready(function(){
     frackamole.createHoles();
-    setTimeout(function(){frackamole.bigCountdown(3);},1000);
+    // setTimeout(function(){frackamole.bigCountdown(3);},1000);
+    setTimeout(function(){frackamole.newGame();},1000);
+
 });
