@@ -7,8 +7,6 @@ input {
 #map {
     z-index:0;
     clear: both;
-    padding: 10px;
-    margin: 10px 0px;
     min-width: 500px;
     min-height:620px;
     background-image:url('../images/UKFrackingMapwithHoles.png');
@@ -222,5 +220,3 @@ div.play-button {
 
 /*Thanks page*/
 
-h4 .panel-title {
-}

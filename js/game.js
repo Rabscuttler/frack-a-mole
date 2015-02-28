@@ -8,7 +8,7 @@ var frackamole = new Object({
     'time': 8, // max seconds
     'timeout': 0, // timeout id
     'duration': 2000, // ms protest appears - actually set at the end at reset
-    'difficulty': 30, // time changes per protest 
+    'difficulty': 10, // time changes per protest 
     'points': 0,
     'zindex':5,
 
