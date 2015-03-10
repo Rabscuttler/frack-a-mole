@@ -7,7 +7,7 @@ input {
 #map {
     z-index:0;
     clear: both;
-    min-width: 500px;
+    width: 500px;
     min-height:620px;
     background-image:url('../images/UKFrackingMapwithHoles.png');
     background-repeat:no-repeat;
@@ -190,7 +190,7 @@ left: 238px;
 /* Global */
 
 body { 
-  background: url('../images/background.jpg') no-repeat center center fixed; 
+  background: url('http://2.bp.blogspot.com/-UPBA3Mdld4U/U46vgGWoWGI/AAAAAAAAAeE/kF3zI3_m35g/s1600/pipe.png') no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -217,6 +217,20 @@ div.intro-box {
 div.play-button {
     text-align: center;
     margin-bottom:15px;
+}
+
+div.header-box {
+    background: url('../images/mario.png') no-repeat;
+}
+
+.fancy-sub-header {
+    font-family: 'Parisienne', cursive;
+    font-style: italic;
+}
+
+.fancy-header {
+    font-family: 'Sigmar One', cursive;
+    font-size: 6em;
 }
 
 /* HELPERS */
