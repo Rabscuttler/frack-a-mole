@@ -8,7 +8,7 @@ var moan = new Audio("../moan.wav");
 var frackamole = new Object({
     'count': 10, // total count (auto set on create)
     'seconds': 0, // start
-    'time': 20, // max seconds
+    'time': 23, // max seconds
     'timeout': 0, // timeout id
     'duration': 1950, // ms protest appears - actually set at the end at reset
     'difficulty': 55, // time changes per protest 
@@ -69,7 +69,7 @@ var frackamole = new Object({
             // clear after interval
             this.seconds++;
             if (this.timeout)
-            clearTimeout(this.timeout);
+                clearTimeout(this.timeout);
             this.timeout = setTimeout(function() {
                 frackamole.protest(id)
             }, this.duration); //2000
@@ -77,12 +77,22 @@ var frackamole = new Object({
             this.duration -= this.difficulty; //1900
         } else {
             // highlight new hole
-            var rand = this.generateRandom();
             if (this.seconds < this.time) {
+
                 clearTimeout(this.timeout);
                 this.timeout = setTimeout(function() {
-                    frackamole.protest(rand, 'on')
-                }, 500);
+                    if (frackamole.seconds >= 16) {
+                        var holes = 1 + (frackamole.seconds - 15)
+                    } else {
+                        var holes = 1;
+                    }
+                    console.log('holes', holes)
+                    for (var i=0;i<holes;i++){
+                        var rand = frackamole.generateRandom();
+                        console.log(rand);
+                        frackamole.protest(rand, 'on');
+                    }
+                }, 500);                
             } else {
                 this.bigCountdown(-1);
             }
@@ -170,7 +180,7 @@ var frackamole = new Object({
                     setTimeout(function(){frackamole.bigCountdown(i-1);},650);
                 } else if (i == -1) {
                     moan.play();
-                    setTimeout(function(){location.href='thanks';},650);
+                    setTimeout(function(){location.href='thanks';},1300);
                 } else {
                     //Give back scroll bars
                     $('body').css({'overflow':'inherit'});
