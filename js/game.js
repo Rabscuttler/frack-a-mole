@@ -11,7 +11,7 @@ var frackamole = new Object({
     'time': 20, // max seconds
     'timeout': 0, // timeout id
     'duration': 1950, // ms protest appears - actually set at the end at reset
-    'difficulty': 55, // time changes per protest 
+    'difficulty': 65, // time changes per protest 
     'points': 0,
     'zindex':5,
 
@@ -36,11 +36,15 @@ var frackamole = new Object({
 
     'clickHole': function(id) {
         var hole = document.getElementById('hole-' + id);
-        if (hole.className != 'hole') {
+        if (hole.className != 'hole') { //if this is the active hole
             this.points += 10;
             document.getElementById('score').innerHTML = this.points;
             hole.className = 'hole on splat'; // click to splat
             squish.play();
+            clearTimeout(this.timeout);
+            this.timeout = setTimeout(function() {
+                    frackamole.protest(id);
+                }, 500);
         }
     },
 
@@ -64,15 +68,18 @@ var frackamole = new Object({
         if (toggle == 'on') {
             // clear after interval
             this.seconds++;
+            if (this.timeout)
+            clearTimeout(this.timeout);
             this.timeout = setTimeout(function() {
                 frackamole.protest(id)
-            }, this.duration);
+            }, this.duration); //2000
             console.log(this.duration);
-            this.duration -= this.difficulty;
+            this.duration -= this.difficulty; //1900
         } else {
             // highlight new hole
             var rand = this.generateRandom();
             if (this.seconds < this.time) {
+                clearTimeout(this.timeout);
                 this.timeout = setTimeout(function() {
                     frackamole.protest(rand, 'on')
                 }, 500);
